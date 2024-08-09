@@ -1,7 +1,6 @@
 local examples = {}
 
-
-examples.p06_LightTheremin.ino = [[
+examples.p06_LightTheremin = [[
 
 /*
   Arduino Starter Kit example
@@ -69,7 +68,7 @@ void loop() {
 ]]
 
 
-examples.switchCase2.ino = [[
+examples.switchCase2 = [[
 
 /*
   Switch statement with serial input
@@ -140,7 +139,7 @@ void loop() {
 ]]
 
 
-examples.switchCase.ino = [[
+examples.switchCase = [[
 
 /*
   Switch statement
@@ -202,7 +201,7 @@ void loop() {
 ]]
 
 
-examples.VirtualColorMixer.ino = [[
+examples.VirtualColorMixer = [[
 
 /*
   This example reads three analog sensors (potentiometers are easiest) and sends
@@ -337,7 +336,7 @@ void loop() {
 ]]
 
 
-examples.p14_TweakTheArduinoLogo.ino = [[
+examples.p14_TweakTheArduinoLogo = [[
 
 /*
   Arduino Starter Kit example
@@ -444,7 +443,7 @@ void loop() {
 ]]
 
 
-examples.toneMelody.ino = [[
+examples.toneMelody = [[
 
 /*
   Melody
@@ -500,7 +499,7 @@ void loop() {
 ]]
 
 
-examples.p12_KnockLock.ino = [[
+examples.p12_KnockLock = [[
 
 /*
   Arduino Starter Kit example
@@ -677,7 +676,7 @@ bool checkForKnock(int value) {
 ]]
 
 
-examples.DigitalReadSerial.ino = [[
+examples.DigitalReadSerial = [[
 
 /*
   DigitalReadSerial
@@ -712,7 +711,7 @@ void loop() {
 ]]
 
 
-examples.WhileStatementConditional.ino = [[
+examples.WhileStatementConditional = [[
 
 /*
   Conditionals - while statement
@@ -805,7 +804,7 @@ void calibrate() {
 ]]
 
 
-examples.Ping.ino = [[
+examples.Ping = [[
 
 /*
   Ping))) Sensor
@@ -890,7 +889,7 @@ long microsecondsToCentimeters(long microseconds) {
 ]]
 
 
-examples.SerialCallResponse.ino = [[
+examples.SerialCallResponse = [[
 
 /*
   Serial Call and Response
@@ -1133,7 +1132,7 @@ void establishContact() {
 ]]
 
 
-examples.Graph.ino = [[
+examples.Graph = [[
 
 /*
   Graph
@@ -1291,7 +1290,7 @@ void loop() {
 ]]
 
 
-examples.toneMultiple.ino = [[
+examples.toneMultiple = [[
 
 /*
   Multiple tone player
@@ -1336,7 +1335,7 @@ void loop() {
 ]]
 
 
-examples.StringConstructors.ino = [[
+examples.StringConstructors = [[
 
 /*
   String constructors
@@ -1422,7 +1421,7 @@ void loop() {
 ]]
 
 
-examples.StringAppendOperator.ino = [[
+examples.StringAppendOperator = [[
 
 /*
   Appending to Strings using the += operator and concat()
@@ -1501,7 +1500,7 @@ void loop() {
 ]]
 
 
-examples.AnalogReadSerial.ino = [[
+examples.AnalogReadSerial = [[
 
 /*
   AnalogReadSerial
@@ -1533,7 +1532,7 @@ void loop() {
 ]]
 
 
-examples.DigitalInputPullup.ino = [[
+examples.DigitalInputPullup = [[
 
 /*
   Input Pull-up Serial
@@ -1584,7 +1583,7 @@ void loop() {
 ]]
 
 
-examples.MultiSerial.ino = [[
+examples.MultiSerial = [[
 
 /*
   Multiple Serial test
@@ -1633,7 +1632,7 @@ void loop() {
 ]]
 
 
-examples.StringSubstring.ino = [[
+examples.StringSubstring = [[
 
 /*
   String substring()
@@ -1683,7 +1682,7 @@ void loop() {
 ]]
 
 
-examples.StringCharacters.ino = [[
+examples.StringCharacters = [[
 
 /*
   String charAt() and setCharAt()
@@ -1735,7 +1734,7 @@ void loop() {
 ]]
 
 
-examples.KeyboardReprogram.ino = [[
+examples.KeyboardReprogram = [[
 
 /*
   Arduino Programs Blink
@@ -1845,7 +1844,7 @@ void loop() {
 ]]
 
 
-examples.Smoothing.ino = [[
+examples.Smoothing = [[
 
 /*
   Smoothing
@@ -1915,7 +1914,7 @@ void loop() {
 ]]
 
 
-examples.JoystickMouseControl.ino = [[
+examples.JoystickMouseControl = [[
 
 /*
   JoystickMouseControl
@@ -2041,7 +2040,7 @@ int readAxis(int thisAxis) {
 ]]
 
 
-examples.p10_Zoetrope.ino = [[
+examples.p10_Zoetrope = [[
 
 /*
   Arduino Starter Kit example
@@ -2150,7 +2149,7 @@ void loop() {
 ]]
 
 
-examples.Debounce.ino = [[
+examples.Debounce = [[
 
 /*
   Debounce
@@ -2242,7 +2241,7 @@ void loop() {
 ]]
 
 
-examples.SerialEvent.ino = [[
+examples.SerialEvent = [[
 
 /*
   Serial Event example
@@ -2306,7 +2305,7 @@ void serialEvent() {
 ]]
 
 
-examples.BareMinimum.ino = [[
+examples.BareMinimum = [[
 
 void setup() {
   // put your setup code here, to run once:
@@ -2319,7 +2318,7 @@ void loop() {
 ]]
 
 
-examples.BlinkWithoutDelay.ino = [[
+examples.BlinkWithoutDelay = [[
 
 /*
   Blink without Delay
@@ -2396,7 +2395,7 @@ void loop() {
 ]]
 
 
-examples.StringLengthTrim.ino = [[
+examples.StringLengthTrim = [[
 
 /*
   String length() and trim()
@@ -2445,7 +2444,7 @@ void loop() {
 ]]
 
 
-examples.p07_Keyboard.ino = [[
+examples.p07_Keyboard = [[
 
 /*
   Arduino Starter Kit example
@@ -2505,7 +2504,7 @@ void loop() {
 ]]
 
 
-examples.StateChangeDetection.ino = [[
+examples.StateChangeDetection = [[
 
 /*
   State change detection (edge detection)
@@ -2589,7 +2588,7 @@ void loop() {
 ]]
 
 
-examples.StringCaseChanges.ino = [[
+examples.StringCaseChanges = [[
 
 /*
   String Case changes
@@ -2639,7 +2638,7 @@ void loop() {
 ]]
 
 
-examples.StringComparisonOperators.ino = [[
+examples.StringComparisonOperators = [[
 
 /*
   Comparing Strings
@@ -2771,7 +2770,7 @@ void loop() {
 ]]
 
 
-examples.ASCIITable.ino = [[
+examples.ASCIITable = [[
 
 /*
   ASCII table
@@ -2854,7 +2853,7 @@ void loop() {
 ]]
 
 
-examples.KeyboardLogout.ino = [[
+examples.KeyboardLogout = [[
 
 /*
   Keyboard logout
@@ -2950,7 +2949,7 @@ void loop() {
 ]]
 
 
-examples.PhysicalPixel.ino = [[
+examples.PhysicalPixel = [[
 
 /*
   Physical Pixel
@@ -3117,7 +3116,7 @@ void loop() {
 ]]
 
 
-examples.Memsic2125.ino = [[
+examples.Memsic2125 = [[
 
 /*
   Memsic2125
@@ -3183,7 +3182,7 @@ void loop() {
 ]]
 
 
-examples.ADXL3xx.ino = [[
+examples.ADXL3xx = [[
 
 /*
   ADXL3xx
@@ -3249,7 +3248,7 @@ void loop() {
 ]]
 
 
-examples.p15_HackingButtons.ino = [[
+examples.p15_HackingButtons = [[
 
 /*
   Arduino Starter Kit example
@@ -3289,7 +3288,7 @@ void loop() {
 ]]
 
 
-examples.RowColumnScanning.ino = [[
+examples.RowColumnScanning = [[
 
 /*
   Row-Column Scanning an 8x8 LED matrix with X-Y input
@@ -3403,7 +3402,7 @@ void refreshScreen() {
 ]]
 
 
-examples.StringIndexOf.ino = [[
+examples.StringIndexOf = [[
 
 /*
   String indexOf() and lastIndexOf() functions
@@ -3475,7 +3474,7 @@ void loop() {
 ]]
 
 
-examples.IfStatementConditional.ino = [[
+examples.IfStatementConditional = [[
 
 /*
   Conditionals - If statement
@@ -3534,7 +3533,7 @@ void loop() {
 ]]
 
 
-examples.ReadAnalogVoltage.ino = [[
+examples.ReadAnalogVoltage = [[
 
 /*
   Fade
@@ -3580,7 +3579,7 @@ void loop() {
 ]]
 
 
-examples.p05_ServoMoodIndicator.ino = [[
+examples.p05_ServoMoodIndicator = [[
 
 /*
   Arduino Starter Kit example
@@ -3638,7 +3637,7 @@ void loop() {
 ]]
 
 
-examples.StringStartsWithEndsWith.ino = [[
+examples.StringStartsWithEndsWith = [[
 
 /*
   String startWith() and endsWith()
@@ -3698,7 +3697,7 @@ void loop() {
 ]]
 
 
-examples.barGraph.ino = [[
+examples.barGraph = [[
 
 /*
   LED bar graph
@@ -3761,7 +3760,7 @@ void loop() {
 ]]
 
 
-examples.ButtonMouseControl.ino = [[
+examples.ButtonMouseControl = [[
 
 /*
   ButtonMouseControl
@@ -3851,7 +3850,7 @@ void loop() {
 ]]
 
 
-examples.p11_CrystalBall.ino = [[
+examples.p11_CrystalBall = [[
 
 /*
   Arduino Starter Kit example
@@ -3971,7 +3970,7 @@ void loop() {
 ]]
 
 
-examples.ForLoopIteration.ino = [[
+examples.ForLoopIteration = [[
 
 /*
   For Loop Iteration
@@ -4024,7 +4023,7 @@ void loop() {
 ]]
 
 
-examples.tonePitchFollower.ino = [[
+examples.tonePitchFollower = [[
 
 /*
   Pitch follower
@@ -4069,7 +4068,7 @@ void loop() {
 ]]
 
 
-examples.p02_SpaceshipInterface.ino = [[
+examples.p02_SpaceshipInterface = [[
 
 /*
   Arduino Starter Kit example
@@ -4138,7 +4137,7 @@ void loop() {
 ]]
 
 
-examples.Midi.ino = [[
+examples.Midi = [[
 
 /*
   MIDI note player
@@ -4190,7 +4189,7 @@ void noteOn(int cmd, int pitch, int velocity) {
 ]]
 
 
-examples.Arrays.ino = [[
+examples.Arrays = [[
 
 /*
   Arrays
@@ -4251,7 +4250,7 @@ void loop() {
 ]]
 
 
-examples.Knock.ino = [[
+examples.Knock = [[
 
 /*
   Knock Sensor
@@ -4311,7 +4310,7 @@ void loop() {
 ]]
 
 
-examples.p09_MotorizedPinwheel.ino = [[
+examples.p09_MotorizedPinwheel = [[
 
 /*
   Arduino Starter Kit example
@@ -4365,7 +4364,7 @@ void loop() {
 ]]
 
 
-examples.p03_LoveOMeter.ino = [[
+examples.p03_LoveOMeter = [[
 
 /*
   Arduino Starter Kit example
@@ -4452,7 +4451,7 @@ void loop() {
 ]]
 
 
-examples.Fade.ino = [[
+examples.Fade = [[
 
 /*
   Fade
@@ -4498,7 +4497,7 @@ void loop() {
 ]]
 
 
-examples.AnalogWriteMega.ino = [[
+examples.AnalogWriteMega = [[
 
 /*
   Mega analogWrite() test
@@ -4550,7 +4549,7 @@ void loop() {
 ]]
 
 
-examples.StringAdditionOperator.ino = [[
+examples.StringAdditionOperator = [[
 
 /*
   Adding Strings together
@@ -4624,7 +4623,7 @@ void loop() {
 ]]
 
 
-examples.AnalogInput.ino = [[
+examples.AnalogInput = [[
 
 /*
   Analog Input
@@ -4680,7 +4679,7 @@ void loop() {
 ]]
 
 
-examples.toneKeyboard.ino = [[
+examples.toneKeyboard = [[
 
 /*
   Keyboard
@@ -4729,7 +4728,7 @@ void loop() {
 ]]
 
 
-examples.Blink.ino = [[
+examples.Blink = [[
 
 /*
   Blink
@@ -4772,7 +4771,7 @@ void loop() {
 ]]
 
 
-examples.ReadASCIIString.ino = [[
+examples.ReadASCIIString = [[
 
 /*
   Reading a serial ASCII-encoded string.
@@ -4846,7 +4845,7 @@ void loop() {
 ]]
 
 
-examples.StringToInt.ino = [[
+examples.StringToInt = [[
 
 /*
   String to Integer conversion
@@ -4902,7 +4901,7 @@ void loop() {
 ]]
 
 
-examples.CharacterAnalysis.ino = [[
+examples.CharacterAnalysis = [[
 
 /*
   Character analysis operators
@@ -4993,7 +4992,7 @@ void loop() {
 ]]
 
 
-examples.p08_DigitalHourglass.ino = [[
+examples.p08_DigitalHourglass = [[
 
 /*
   Arduino Starter Kit example
@@ -5078,7 +5077,7 @@ void loop() {
 ]]
 
 
-examples.p13_TouchSensorLamp.ino = [[
+examples.p13_TouchSensorLamp = [[
 
 /*
   Arduino Starter Kit example
@@ -5150,7 +5149,7 @@ void loop() {
 ]]
 
 
-examples.SerialCallResponseASCII.ino = [[
+examples.SerialCallResponseASCII = [[
 
 /*
   Serial Call and Response in ASCII
@@ -5379,7 +5378,7 @@ void establishContact() {
 ]]
 
 
-examples.ArduinoISP.ino = [[
+examples.ArduinoISP = [[
 
 // ArduinoISP
 // Copyright (c) 2008-2011 Randall Bohn
@@ -6123,7 +6122,7 @@ void avrisp() {
 ]]
 
 
-examples.AnalogInOutSerial.ino = [[
+examples.AnalogInOutSerial = [[
 
 /*
   Analog input, analog output, serial output
@@ -6181,7 +6180,7 @@ void loop() {
 ]]
 
 
-examples.KeyboardMessage.ino = [[
+examples.KeyboardMessage = [[
 
 /*
   Keyboard Message test
@@ -6239,7 +6238,7 @@ void loop() {
 ]]
 
 
-examples.Dimmer.ino = [[
+examples.Dimmer = [[
 
 /*
   Dimmer
@@ -6359,7 +6358,7 @@ void loop() {
 ]]
 
 
-examples.Fading.ino = [[
+examples.Fading = [[
 
 /*
   Fading
@@ -6406,7 +6405,7 @@ void loop() {
 ]]
 
 
-examples.p04_ColorMixingLamp.ino = [[
+examples.p04_ColorMixingLamp = [[
 
 /*
   Arduino Starter Kit example
@@ -6508,7 +6507,7 @@ void loop() {
 ]]
 
 
-examples.StringLength.ino = [[
+examples.StringLength = [[
 
 /*
   String length()
@@ -6564,7 +6563,7 @@ void loop() {
 ]]
 
 
-examples.KeyboardAndMouseControl.ino = [[
+examples.KeyboardAndMouseControl = [[
 
 /*
   KeyboardAndMouseControl
@@ -6662,7 +6661,7 @@ void loop() {
 ]]
 
 
-examples.KeyboardSerial.ino = [[
+examples.KeyboardSerial = [[
 
 /*
   Keyboard test
@@ -6707,7 +6706,7 @@ void loop() {
 ]]
 
 
-examples.Button.ino = [[
+examples.Button = [[
 
 /*
   Button
@@ -6764,7 +6763,7 @@ void loop() {
 ]]
 
 
-examples.StringReplace.ino = [[
+examples.StringReplace = [[
 
 /*
   String replace()
@@ -6821,7 +6820,7 @@ void loop() {
 ]]
 
 
-examples.SerialPassthrough.ino = [[
+examples.SerialPassthrough = [[
 
 /*
   SerialPassthrough sketch
@@ -6867,7 +6866,7 @@ void loop() {
 ]]
 
 
-examples.Calibration.ino = [[
+examples.Calibration = [[
 
 /*
   Calibration
@@ -6946,3 +6945,5 @@ void loop() {
 }
 
 ]]
+
+return examples

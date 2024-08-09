@@ -1,5 +1,28 @@
 -- Simple Lua package to make working with Arduino in Neovim easier
 local arduinoo = {}
+local examples = require("examples")
+
+local sketches = {}
+for k, v in pairs(examples) do
+  if type(v) == "string" then
+    table.insert(sketches, k)
+  end
+end
+
+local function is_valid_example(example)
+  return sketches[example] ~= nil
+end
+
+local function sketch_completion(arg_lead)
+  local completions = {}
+  for _, sketch in ipairs(sketches) do
+    if vim.startswith(sketch, arg_lead) then
+      table.insert(completions, sketch)
+    end
+  end
+  return completions
+end
+
 
 -- check if arduino cli is installed
 function arduinoo.check_dependencies(verbose)
@@ -35,14 +58,38 @@ function arduinoo.check_dependencies(verbose)
 end
 
 -- Create a new sketch in the current directory
-function arduinoo.create_sketch()
+function arduinoo.create_sketch(opts)
   if not arduinoo.check_dependencies(false) then
     return
   end
   local parts = vim.split(vim.fn.system("pwd"), "/")
-  vim.fn.system(string.format("test -e %s", parts[#parts]:gsub("\n$", "")) .. ".ino")
+  local file_name = parts[#parts]:gsub("\n$", "") .. ".ino"
+  vim.fn.system(string.format("test -e %s", file_name))
   if vim.v.shell_error == 0 then
     print("The current directory already contains an Arduino sketch")
+    return
+  end
+  parts = vim.split(opts.args, " ")
+  local arg1 = parts[#parts]
+  if arg1 ~= "" then
+    if not is_valid_example(arg1) then
+      print("Invalid example '" .. arg1 .. "' provided")
+      return
+    end
+    local result = vim.fn.system(string.format("touch %"))
+    if vim.v.shell_error ~= 0 then
+      print("Somethinw went wrong while creating new sketch")
+      print(result)
+      return
+    end
+    local file, err_msg = io.open(file_name, "w")
+    if not file then
+      print("Something went wrong while generating sketch content")
+      print(err_msg)
+      return
+    end
+    _, err_msg = file:write()
+    file:close()
     return
   end
   local result = vim.fn.system("arduino-cli sketch new .")
@@ -50,10 +97,6 @@ function arduinoo.create_sketch()
     print("Something went wrong while creating new sketch")
     print(result)
   end
-end
-
--- Compile current projet
-function arduinoo.generate_sketch(opts)
 end
 
 -- Compile current projet
@@ -65,7 +108,7 @@ function arduinoo.upload()
 end
 
 vim.api.nvim_create_user_command(
-  'ArduinooCheckDependencies', function ()
+  'ArduinooCheckDependencies', function()
     arduinoo.check_dependencies(true)
   end,
   {
@@ -76,8 +119,8 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
   'ArduinooCreateSketch', arduinoo.create_sketch,
   {
-    nargs = '*',
-    complete = nil,
+    nargs = 1,
+    complete = sketch_completion,
   }
 )
 
