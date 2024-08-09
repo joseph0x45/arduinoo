@@ -1,2 +1,2 @@
-# arduino-snippets
-Arduino starter sketch snippets for Neovim
+# arduinoo
+Lua plugin that provide a little set of useful commands for working with Arduino
