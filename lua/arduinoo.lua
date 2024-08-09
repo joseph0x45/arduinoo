@@ -125,6 +125,8 @@ end
 
 -- Upload current project
 function arduinoo.upload()
+  local result = vim.fn.system("arduino-cli upload")
+  print(result)
 end
 
 vim.api.nvim_create_user_command(
