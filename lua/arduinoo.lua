@@ -107,6 +107,20 @@ end
 
 -- Compile current projet
 function arduinoo.compile()
+  -- check if you have a sketch.yml
+  -- if yes compile if not tell you to attach a board
+  vim.fn.system(string.format("test %s/sketch.yml", vim.fn.system("pwd")))
+  if vim.v.shell_error == 0 then
+    print("sketch.yml file not found.")
+    print("Please attach a board to your sketch")
+    return
+  end
+  local result = vim.fn.system("arduino-cli compile")
+  if vim.v.shell_error ~= 0 then
+    print(result)
+    return
+  end
+  print(result)
 end
 
 -- Upload current project
@@ -127,6 +141,20 @@ vim.api.nvim_create_user_command(
   {
     nargs = 1,
     complete = sketch_completion,
+  }
+)
+vim.api.nvim_create_user_command(
+  'ArduinooCompile', arduinoo.compile,
+  {
+    nargs = 0,
+    complete = nil,
+  }
+)
+vim.api.nvim_create_user_command(
+  'ArduinooUpload', arduinoo.upload,
+  {
+    nargs = 0,
+    complete = nil,
   }
 )
 
