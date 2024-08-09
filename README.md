@@ -1,6 +1,8 @@
 # arduinoo
 Lua plugin that provide a little set of useful commands for working with Arduin
 
+![Sample](./image.png)
+
 ## Installation
 You can install this plugin with your favorite package manager
 ### Packer
