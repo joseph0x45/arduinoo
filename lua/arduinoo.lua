@@ -47,13 +47,13 @@ function arduinoo.create_sketch()
   end
   local result = vim.fn.system("arduino-cli sketch new .")
   if vim.v.shell_error ~= 0 then
-    print("Something went bad while creating new sketch")
+    print("Something went wrong while creating new sketch")
     print(result)
   end
 end
 
--- Generate a new sketch example in the current directory
-function arduinoo.generate_sketch()
+-- Compile current projet
+function arduinoo.generate_sketch(opts)
 end
 
 -- Compile current projet
