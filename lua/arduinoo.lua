@@ -2,23 +2,43 @@
 local arduinoo = {}
 
 -- check if arduino cli is installed
-function arduinoo.check_dependencies()
-  vim.fn.system("arduino-cli version")
+function arduinoo.check_dependencies(verbose)
+  local arduino_cli_version = vim.fn.system("arduino-cli version")
   local exit_code = vim.v.shell_error
   if exit_code ~= 0 then
     print("arduino-cli not found in $PATH")
-    return
+    return false
   end
-  vim.fn.system("wc --version")
+  if verbose then
+    print("Arduino CLI found in PATH")
+    print(arduino_cli_version)
+  end
   if exit_code ~= 0 then
     print("wc(word count) not found in $PATH")
-    return
+    return false
   end
-  print("All dependencies are installed!")
+  if verbose then
+    print("wc found in PATH")
+  end
+  vim.fn.system("test")
+  if exit_code ~= 0 then
+    print("test not found in $PATH")
+    return false
+  end
+  if verbose then
+    print("test found in PATH")
+  end
+  if verbose then
+    print("All dependencies are installed!")
+  end
+  return true
 end
 
 -- Create a new sketch in the current directory
 function arduinoo.create_sketch()
+  if not arduinoo.check_dependencies(false) then
+    return
+  end
   local parts = vim.split(vim.fn.system("pwd"), "/")
   vim.fn.system(string.format("test -e %s", parts[#parts]:gsub("\n$", "")) .. ".ino")
   if vim.v.shell_error == 0 then
@@ -45,7 +65,9 @@ function arduinoo.upload()
 end
 
 vim.api.nvim_create_user_command(
-  'ArduinooCheckDependencies', arduinoo.check_dependencies,
+  'ArduinooCheckDependencies', function ()
+    arduinoo.check_dependencies(true)
+  end,
   {
     nargs = '*',
     complete = nil,
