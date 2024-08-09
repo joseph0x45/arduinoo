@@ -72,24 +72,30 @@ function arduinoo.create_sketch(opts)
   parts = vim.split(opts.args, " ")
   local arg1 = parts[#parts]
   if arg1 ~= "" then
-    if not is_valid_example(arg1) then
+    local content = examples[arg1]
+    if not content then
       print("Invalid example '" .. arg1 .. "' provided")
       return
     end
-    local result = vim.fn.system(string.format("touch %"))
+    local result = vim.fn.system(string.format("touch %s", file_name))
     if vim.v.shell_error ~= 0 then
       print("Somethinw went wrong while creating new sketch")
       print(result)
       return
     end
-    local file, err_msg = io.open(file_name, "w")
+    local success, err_msg, file
+    file, err_msg = io.open(file_name, "w")
     if not file then
       print("Something went wrong while generating sketch content")
       print(err_msg)
       return
     end
-    _, err_msg = file:write()
+    success, err_msg = file:write(content)
     file:close()
+    if not success then
+      print("Something went wrong while generating sketch content")
+      print(err_msg)
+    end
     return
   end
   local result = vim.fn.system("arduino-cli sketch new .")
