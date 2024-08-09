@@ -9,10 +9,6 @@ for k, v in pairs(examples) do
   end
 end
 
-local function is_valid_example(example)
-  return sketches[example] ~= nil
-end
-
 local function sketch_completion(arg_lead)
   local completions = {}
   for _, sketch in ipairs(sketches) do
