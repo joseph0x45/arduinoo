@@ -1,5 +1,5 @@
 # arduinoo
-Lua plugin that provide a little set of useful commands for working with Arduin
+Lua plugin that provides a small set of useful commands for working with Arduino
 
 ![Sample](./image.png)
 
@@ -7,7 +7,7 @@ Lua plugin that provide a little set of useful commands for working with Arduin
 You can install this plugin with your favorite package manager
 ### Packer
 ```
-    use "joseph0x45/arduinoo"
+use "joseph0x45/arduinoo"
 ```
 You also need a few dependencies:
 - arduino-cli
