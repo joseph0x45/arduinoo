@@ -125,35 +125,37 @@ function arduinoo.upload()
   print(result)
 end
 
-vim.api.nvim_create_user_command(
-  'ArduinooCheckDependencies', function()
-    arduinoo.check_dependencies(true)
-  end,
-  {
-    nargs = '*',
-    complete = nil,
-  }
-)
-vim.api.nvim_create_user_command(
-  'ArduinooCreateSketch', arduinoo.create_sketch,
-  {
-    nargs = 1,
-    complete = sketch_completion,
-  }
-)
-vim.api.nvim_create_user_command(
-  'ArduinooCompile', arduinoo.compile,
-  {
-    nargs = 0,
-    complete = nil,
-  }
-)
-vim.api.nvim_create_user_command(
-  'ArduinooUpload', arduinoo.upload,
-  {
-    nargs = 0,
-    complete = nil,
-  }
-)
+function arduinoo.setup()
+  vim.api.nvim_create_user_command(
+    'ArduinooCheckDependencies', function()
+      arduinoo.check_dependencies(true)
+    end,
+    {
+      nargs = '*',
+      complete = nil,
+    }
+  )
+  vim.api.nvim_create_user_command(
+    'ArduinooCreateSketch', arduinoo.create_sketch,
+    {
+      nargs = 1,
+      complete = sketch_completion,
+    }
+  )
+  vim.api.nvim_create_user_command(
+    'ArduinooCompile', arduinoo.compile,
+    {
+      nargs = 0,
+      complete = nil,
+    }
+  )
+  vim.api.nvim_create_user_command(
+    'ArduinooUpload', arduinoo.upload,
+    {
+      nargs = 0,
+      complete = nil,
+    }
+  )
+end
 
 return arduinoo
