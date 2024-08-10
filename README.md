@@ -14,6 +14,11 @@ You also need a few dependencies:
 - wc
 - test
 
+And use to set it up
+```lua
+require("arduinoo").setup()
+```
+
 
 ## ArduinooCheckDependencies
 This command will check if you have all the dependencies installed on your system in order for this plugin to work properly
